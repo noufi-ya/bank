@@ -8,14 +8,14 @@
     <form action="">
 
         <div class="p-3 mt-2">
-            <input (change)="acnoChange($event)" id="acid" name="acnum1" class="form-control" type="text" [placeholder]= "inputplaceholder">
+            <input #acno  id="acid" name="acnum1" class="form-control" type="text" [placeholder]= "inputplaceholder">
         </div>
         <div class="p-3 mt-2">
-            <input (change)="pswrdChange($event)" id="psw1" name="paswrd1" class="form-control" type="password" placeholder= " Enter Password">
+            <input #psw  id="psw1" name="paswrd1" class="form-control" type="password" placeholder= " Enter Password">
         </div>
         <div class="p-3 mt-2" >
 
-            <button type="button" (click)="login()" class="btn btn-outline-light">login</button>
+            <button type="button" (click)="login(acno,psw)" class="btn btn-outline-light">login</button>
 
 
         </div>

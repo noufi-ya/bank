@@ -10,8 +10,8 @@ export class LoginComponent implements OnInit {
   data="Your Perfect Banking Partner..!!"
   inputplaceholder="Account Number"
 
-  acno=""         // or acno=any
-  psw=""
+  // acno=""         // or acno=any
+  // psw=""
 
   userDetails:any={
     1000:{acno:1000,username:"anu",password:"abc123",balance:0 },
@@ -25,25 +25,88 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  login(){
+  // login(){
+
+  //   var acnum=this.acno
+  //   var psw=this.psw
+  //   var userDetails=this.userDetails
+
+  //   if(acnum in userDetails){
+
+  //     if(psw==userDetails[acnum]["password"]){
+
+  //       alert("login success")
+
+  //     }
+  //     else{
+  //       alert("incorrect password")
+  //     }
+
+  //   }
+
+  //   else{
+  //     alert("account no incorrect or not registered")
+  //   }
+
+
+
+
+  //   // alert("login clicked")
+
+  // }
+
+
+  login(a:any,b:any){
+    console.log(a.value);
+    
+
+    var acnum=a.value
+    var psw=b.value
+    var userDetails=this.userDetails
+
+    if(acnum in userDetails){
+
+      if(psw==userDetails[acnum]["password"]){
+
+        alert("login success")
+
+      }
+      else{
+        alert("incorrect password")
+      }
+
+    }
+
+    else{
+      alert("account no incorrect or not registered")
+    }
+
+
+
+
     alert("login clicked")
 
   }
-  acnoChange(event:any){
 
-    this.acno=(event.target.value);
-    console.log(this.acno);
+
+
+
+
+  // acnoChange(event:any){
+
+  //   this.acno=(event.target.value);
+  //   console.log(this.acno);
     
     
 
-  }
+  // }
 
-  pswrdChange(event:any){
-    this.psw=(event.target.value);
-    console.log(this.psw);
+  // pswrdChange(event:any){
+  //   this.psw=(event.target.value);
+  //   console.log(this.psw);
     
     
-  }
+  // }
 
 
 }
